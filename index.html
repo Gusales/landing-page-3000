@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cup of Code</title>
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/png">
+
+  <link rel="stylesheet" href="./src/styles/home.css">
+
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+  <header>
+    <a href="#" class="logo">
+      <img src="./src/assets/images/logo.png" alt="Logo do Cup of Code, um Copo de Café">
+      <h1>Cup of Code</h1>
+    </a>
+    <a href="" class="learn_more_link">Saiba mais!</a>
+  </header>
+
+  <main class="content">
+    <h2>Vai um copo de água ou café?</h2>
+    <div class="content">
+      <p><i>Cup of Code</i> é um projeto de integração entre tecnologia e um hábito que precisamos ter diariamente:
+        Tomar água.</p>
+      <p>Criamos um copo que, consegue medir a quantidade de água consumida por pessoas e, dependendo da quantidade
+        determinada, consiga exibir notificações para que as pessoas possam lembrar de beber água.</p>
+    </div>
+    <button class="learn_more_link" id="learn_more_link">Seja o primeiro a receber!</button>
+  </main>
+
+  <dialog class="form-overlay">
+    <button type="button" id="close_cta_modal" title="Fechar menu">
+      <i class="ph-bold ph-x"></i>
+    </button>
+    <form>
+      <h2>Quer ser o primeiro a receber o nosso produto?</h2>
+      <p>Preencha o formulário a seguir e, assim que tivermos estoque, enviaremos um email notificando!</p>
+
+      <input type="text" placeholder="Digite seu nome" required>
+      <input type="email" placeholder="Digite seu email" required>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </dialog>
+
+  <script src="./src/scripts/main.js"></script>
+</body>
+
+</html>

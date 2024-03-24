@@ -1,0 +1,176 @@
+@import './globals.css';
+@import '../components/cta-form.css';
+
+header {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 2.15rem;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  text-decoration: none;
+  transition: transform 400ms;
+
+  &:focus,
+  &:hover {
+    outline: 0;
+    transform: scale(1.05);
+  }
+
+  img {
+    width: 75px;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 1.55rem;
+    line-height: 140%;
+    color: var(--zinc-200);
+  }
+}
+
+header .navigation_menu {
+  display: flex;
+  gap: 3rem;
+
+  li {
+    list-style: none;
+  }
+
+  li a {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: var(--zinc-200);
+    text-decoration: none;
+
+    &:focus {
+      outline: 0;
+      text-decoration: underline;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.learn_more_link {
+  background: var(--green-900);
+  color: var(--zinc-200);
+
+  padding: 0.625rem 1.875rem;
+
+  font-size: 1.125rem;
+  letter-spacing: 2%;
+  text-decoration: none;
+
+  border-radius: 6px;
+  transition: background 400ms;
+
+  &:focus {
+    outline: 4px solid var(--green-800);
+  }
+
+  &:hover {
+    background: var(--green-800);
+  }
+}
+
+header #open_mobile_menu {
+  display: none;
+  cursor: pointer;
+  background: transparent;
+  outline: 0;
+  border: 0;
+
+  font-size: 4rem;
+  color: var(--zinc-50);
+}
+
+main {
+  margin-top: 6rem;
+  margin-left: 2rem;
+  max-width: 40%;
+}
+
+main h2 {
+  font-size: 3.75rem;
+  line-height: 115%;
+}
+
+main .content {
+  margin-top: 0.75rem;
+  font-size: 1.25rem;
+  line-height: 115%;
+}
+
+main .learn_more_link {
+  margin-top: 1.25rem;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 835px) {
+  header {
+    padding-top: 2rem;
+  }
+
+  header .logo {
+    gap: 0.25rem;
+
+    img {
+      width: 120px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  main {
+    min-width: 80%;
+    margin: 2rem auto 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  header {
+    padding: 1rem;
+  }
+
+  header .logo {
+    img {
+      width: 60px;
+    }
+
+    h1 {
+      font-size: 1.25rem;
+    }
+  }
+
+  header #open_mobile_menu {
+    font-size: 2rem;
+  }
+
+  main {
+    margin-top: .5rem;
+  }
+
+  main h2 {
+    font-size: 2rem;
+  }
+
+  main .content {
+    margin-top: .75rem;
+    font-size: .9rem;
+  }
+}

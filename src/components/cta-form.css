@@ -1,0 +1,165 @@
+.form-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.19);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 0;
+}
+
+.close_cta_form {
+  display: none;
+  transition: all 600ms;
+  animation: closeFormOverlay .5s both;
+}
+
+.form-overlay[open] {
+  animation: showFormOverlay .5s both;
+}
+
+#close_cta_modal {
+  border: 0;
+  outline: 0;
+  background: transparent;
+
+  color: var(--zinc-50);
+  font-size: 3rem;
+
+  position: absolute;
+  right: .75rem;
+  top: .75rem;
+
+  cursor: pointer;
+
+  transition: color 400ms;
+
+  &:hover,
+  &:focus {
+    color: var(--green-500);
+  }
+
+  &:focus {
+    outline: 2px solid var(--green-500);
+    line-height: 0;
+    border-radius: 6px;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+
+  background: var(--zinc-800);
+  padding: 2rem;
+
+  border-radius: 6px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.63);
+}
+
+form h2 {
+  font-size: 2.5rem;
+  color: var(--zinc-50);
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+form p {
+  font-size: 1.25rem;
+  text-align: center;
+  color: var(--zinc-100);
+  margin: 1.5rem 0;
+}
+
+form input,
+form button {
+  padding: 1rem;
+  margin-bottom: .5rem;
+
+  outline: 0;
+  border: 0;
+}
+
+form input {
+  font-size: 1.25rem;
+  color: var(--zinc-100);
+
+  background: var(--zinc-700);
+  border-radius: 6px;
+
+  &:focus {
+    border: 0;
+    outline: 2px solid var(--zinc-200);
+  }
+
+  &::placeholder {
+    color: var(--zinc-400);
+  }
+}
+
+form button {
+  background: var(--green-900);
+  color: var(--zinc-200);
+
+  font-weight: 600;
+  font-size: 1.25rem;
+
+  cursor: pointer;
+  transition: background 400ms;
+
+  &:hover {
+    background: var(--green-800);
+  }
+}
+
+@keyframes showFormOverlay {
+  0% {
+    width: 50%;
+    height: 50%;
+    opacity: 1;
+  }
+
+  100% {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes closeFormOverlay {
+  0% {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  }
+
+  100% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+
+}
+
+@media screen and (max-width: 769px) {
+  form {
+    width: 90%;
+  }
+
+  form h2 {
+    font-size: 1.5rem;
+  }
+
+  form p {
+    font-size: 1rem;
+  }
+}
